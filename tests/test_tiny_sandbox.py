@@ -1,6 +1,5 @@
 """Tests for tiny-sandbox."""
 import pytest
-import time
 from tiny_sandbox import Sandbox, SandboxError, TimeoutException, execute
 
 

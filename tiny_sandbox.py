@@ -529,17 +529,19 @@ class Sandbox:
         self,
         code: str,
         timeout: float,
-        g: Optional[Dict[str, Any]] = None,
-        l: Optional[Dict[str, Any]] = None,
+        globals_: Optional[Dict[str, Any]] = None,
+        locals_: Optional[Dict[str, Any]] = None,
     ) -> SandboxResult:
         # 1. Build execution globals/locals (done before try so they exist for result)
-        if g is None:
-            g = {}
-        if l is None:
-            l = {}
+        # `g`/`l` were renamed: ruff E741 rejects ambiguous single-letter names,
+        # and `l` is unreadable next to `1` in tracebacks.
+        if globals_ is None:
+            globals_ = {}
+        if locals_ is None:
+            locals_ = {}
 
-        safe_globals = dict(g)
-        safe_locals = dict(l)
+        safe_globals = dict(globals_)
+        safe_locals = dict(locals_)
 
         if isinstance(__builtins__, dict):
             bi = __builtins__
