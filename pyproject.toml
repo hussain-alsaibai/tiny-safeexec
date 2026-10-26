@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=64"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "tiny-sandbox"
@@ -31,3 +31,6 @@ Repository = "https://github.com/hussain-alsaibai/tiny-sandbox"
 
 [tool.setuptools.packages.find]
 include = ["tiny_sandbox*"]
+
+[tool.ruff]
+exclude = ["__pycache__", ".venv", "build", "dist", ".pytest_cache"]
