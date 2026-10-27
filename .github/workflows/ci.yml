@@ -21,7 +21,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install deps
-        run: pip install pytest ruff
+        run: |
+          pip install pytest "ruff==0.17.2"
+          # The tests import the package by name, so install it first.
+          pip install -e .
       - name: Lint
         run: ruff check . --ignore E501
       - name: Test

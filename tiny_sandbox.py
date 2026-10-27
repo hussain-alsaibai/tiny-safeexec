@@ -5,15 +5,14 @@ MIT License
 """
 
 import ast
+import builtins
+import contextlib
+import io
+import signal
 import sys
 import time
-import signal
-import io
-import contextlib
-import builtins
-from typing import Any, Dict, Optional, List
 from dataclasses import dataclass, field
-
+from typing import Any, Dict, List, Optional
 
 __version__ = "1.0.0"
 
