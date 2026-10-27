@@ -261,7 +261,7 @@ def _check_syntax(code: str) -> ast.AST:
     try:
         return ast.parse(code)
     except SyntaxError as e:
-        raise SandboxError(f"Syntax error: {e}")
+        raise SandboxError(f"Syntax error: {e}") from e
 
 
 def _validate_and_transform(code: str, allow_imports: bool = False) -> ast.AST:

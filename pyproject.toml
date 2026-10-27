@@ -34,3 +34,9 @@ include = ["tiny_sandbox*"]
 
 [tool.ruff]
 exclude = ["__pycache__", ".venv", "build", "dist", ".pytest_cache"]
+# Lint rules are declared explicitly so the CI result does not depend on
+# whichever ruff release pip happens to install that day. Without an explicit
+# `select`, ruff 0.17 enables rules such as FA100 and PIE790 that fail this
+# codebase on every Python version in the matrix.
+lint.select = ["E", "F", "W", "I", "B"]
+lint.ignore = ["E501"]
