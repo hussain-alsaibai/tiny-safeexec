@@ -29,8 +29,12 @@ dependencies = []
 Homepage = "https://github.com/hussain-alsaibai/tiny-sandbox"
 Repository = "https://github.com/hussain-alsaibai/tiny-sandbox"
 
-[tool.setuptools.packages.find]
-include = ["tiny_sandbox*"]
+[tool.setuptools]
+# tiny_sandbox is a single module, not a package. Without an explicit
+# py-modules list, setuptools discovers no package and the wheel ships
+# no importable module, so `pip install -e .` leaves the tests failing with
+# ModuleNotFoundError: No module named 'tiny_sandbox'.
+py-modules = ["tiny_sandbox"]
 
 [tool.ruff]
 exclude = ["__pycache__", ".venv", "build", "dist", ".pytest_cache"]
