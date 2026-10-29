@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)](#)
 [![tiny-*](https://img.shields.io/badge/tiny%E2%98%85-ecosystem-purple.svg)](https://github.com/hussain-alsaibai)
+[![CI](https://github.com/hussain-alsaibai/tiny-safeexec/actions/workflows/ci.yml/badge.svg)](https://github.com/hussain-alsaibai/tiny-safeexec/actions/workflows/ci.yml)
 
 > **Tiny secure Python code execution sandbox using AST transformation. Zero dependencies.**
 
