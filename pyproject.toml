@@ -3,9 +3,9 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tiny-sandbox"
+name = "tiny-safeexec"
 version = "1.0.0"
-description = "AST-based secure Python code execution sandbox. Zero dependencies."
+description = "Copy of tiny-sandbox (same library code). Use the tiny-sandbox package instead. Zero dependencies."
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.8"
