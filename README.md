@@ -1,4 +1,17 @@
-# tiny-sandbox
+# tiny-safeexec (a copy of tiny-sandbox)
+> **⚠ This repository is a copy of [`tiny-sandbox`](https://github.com/hussain-alsaibai/tiny-sandbox).**
+>
+> The library code is byte-identical (`tiny_sandbox.py`, 681 lines) and the test
+> suite is the same file, `tests/test_tiny_sandbox.py`. This repo is not a
+> distinct library and does not declare its own PyPI package name — both
+> repos declare `name = "tiny-sandbox"` in `pyproject.toml`, so only one of
+> them can ever be published.
+>
+> Use [`tiny-sandbox`](https://github.com/hussain-alsaibai/tiny-sandbox).
+> It is the original, it carries the release workflow, and it is the one in
+> the ecosystem index.
+
+
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
